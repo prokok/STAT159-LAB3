@@ -40,7 +40,7 @@ test_that("missing value", {
   y = c(TRUE, FALSE, TRUE)
   
   expect_length(missing_values(x), 1)
-  expect_type(missing_values(z), 'double')
+  expect_type(missing_values(y), 'double')
   expect_gte(missing_values(x), 0)
  
 })
