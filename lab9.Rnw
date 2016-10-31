@@ -8,15 +8,14 @@
 \SweaveOpts{concordance=TRUE}
 \maketitle
 
-\begin{abstract}
+\section{Abstract}
 In this report, I will reproduce the main results displayed in section 3.1 \emph{Simple Linear Regression (chapter3)} of the book \emph{An introduction to Statistical Learning} descirbed below : 
-
 \begin{itemize}
 \item Figure 3.1 (page 62) Scatterplot with fitted regression line (the vertical distances of each point to the line are optional).  
 \item Table 3.1 (page 68) Summary of regression coefficients.  
 \item Table 3.2 (page 69) Quality indices RSE, R square, and F-statistic. efforts on demonstrating that reinforcement learning can be made peer-to-peer, autonomous, and cacheable.
 \end{itemize}
-\end{abstract}
+
 
 \section{Introduction}
 The goal of this homework is to reproduce the results of Explanatory Data Analysis on TV advertising budget and Sales and see if there is a assoication between them. If so, using linear regression we will see how they are correlated and how accurate model that can be used to predict sales based on the TV advertising budgets.
@@ -63,11 +62,17 @@ Residual Standard Error refers the estimated standard error of residuals. It mea
 In simple linear regression, null hypothesis of F-test is 'slope equals to zero.' Here, F-statistics is \Sexpr{round(sum_reg$fstatistic[1],5)} which is significant to reject the null.
 
 
+\begin{figure}[!htb]
+  \begin{center}
+    \caption{Scatterplot with fitted regression line}
+    \centering
+      \includegraphics[width=4in]{scatterplot-tv-sales.pdf}
+  \end{center}
+\end{figure}
 
 
 \section{Conclusions}
-\label{sec:conc}
+According to the Table 2, F-statistics indicates to reject the null hypothesis, $H_0 : \beta_{1} = 0$. Therefore, there is a linear relationship between `TV advertising budgets` and `Sales.` It is the same result when we test with the correlation coefficient presented in Table1. In the plot, it seems that there are slightly more variations at both ends. However, the data shows pretty good linear relationship between TV advertising and the Sales. 1000 standard unit increase in TV advertising, increases 47 standard units in sales. Thus, it is safe to conclude that there is a linear relationship between them. 
 
-Our contributions are threefold. To begin with, we concentrate our efforts on disproving that gigabit switches can be made random, authenticated, and modular. Continuing with this rationale, we motivate a distributed tool for constructing semaphores (LIVING), which we use to disconfirm that public-private key pairs and the location-identity split can connect to realize this objective. Third, we confirm that A* search and sensor networks are never incompatible.
 
 \end{document}
