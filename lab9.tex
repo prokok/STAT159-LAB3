@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Simple Linear Regression Analysis}
+\author{PHILHOON OH}
+
+\usepackage{Sweave}
+\begin{document}
+\input{lab9-concordance}
+\maketitle
+
+\begin{abstract}
+In this report, I will reproduce the main results displayed in section 3.1 \emph{Simple Linear Regression (chapter3)} of the book \emph{An introduction to Statistical Learning} descirbed below : 
+
+\begin{itemize}
+\item Figure 3.1 (page 62) Scatterplot with fitted regression line (the vertical distances of each point to the line are optional).  
+\item Table 3.1 (page 68) Summary of regression coefficients.  
+\item Table 3.2 (page 69) Quality indices RSE, R square, and F-statistic. efforts on demonstrating that reinforcement learning can be made peer-to-peer, autonomous, and cacheable.
+\end{itemize}
+\end{abstract}
+
+\section{Introduction}
+The goal of this homework is to reproduce the results of Explanatory Data Analysis on TV advertising budget and Sales and see if there is a assoication between them. If so, using linear regression we will see how they are correlated and how accurate model that can be used to predict sales based on the TV advertising budgets.
+
+
+\section{Data}
+Data set consists of the Sales(in thousand of units) of a certain products in 200 different markets, and the advertising budgets of 3 differnet media: TV, Radio, and Newspaper (4 variabales and 200 observations.) Since we are focusing on the TV and Sales, first we need to extract the data and applying the simple linear regression.
+
+
+\section{Methodology}
+I will apply a simple linear regression model to see the linear relationship between TV advertising budgets and the Sales:
+
+$$\\Sales = \beta_{0} + \beta_{1}TV$$ 
+
+To estimate the coefficients $\beta_{0}$ and $\beta_{1}$ we fit a regression model via the least squares criterion (Best Linear Prediction method).
+
+\section{Results}
+The regression coefficients are discribed below in a table:
+
+```{r echo = FALSE, results='asis'}
+load("../data/regression.Rdata")
+sum_table = xtable(sum_reg$coefficient,  digits = 4, caption="Information about Regression Coefficients")
+print(sum_table, comment=FALSE, type = "latex")
+```
+
+
+\section{Conclusions}
+\label{sec:conc}
+
+Our contributions are threefold. To begin with, we concentrate our efforts on disproving that gigabit switches can be made random, authenticated, and modular. Continuing with this rationale, we motivate a distributed tool for constructing semaphores (LIVING), which we use to disconfirm that public-private key pairs and the location-identity split can connect to realize this objective. Third, we confirm that A* search and sensor networks are never incompatible.
+
+\end{document}
