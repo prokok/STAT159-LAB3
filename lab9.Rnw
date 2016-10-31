@@ -36,16 +36,33 @@ To estimate the coefficients $\beta_{0}$ and $\beta_{1}$ we fit a regression mod
 \section{Results}
 The regression coefficients are discribed below in a table:
 
-```{r echo = FALSE, results='asis'}
-load("../data/regression.Rdata")
-sum_table = xtable(sum_reg$coefficient,  digits = 4, caption="Information about Regression Coefficients")
-print(sum_table, comment=FALSE, type = "latex")
-```
-<<>>=
+<<regression coefficients table, echo = FALSE, results = tex>>=
 load("regression.Rdata")
+library(xtable)
 sum_table = xtable(sum_reg$coefficient,  digits = 4, caption="Information about Regression Coefficients")
 print(sum_table, comment=FALSE, type = "latex")
 @
+   
+Under the null hyopthesis, p-value of intercept is significant to reject the null. The estimate of the   intercept is \Sexpr{round(sum_reg$coefficients[1,1],5)} with sd of \Sexpr{round(sum_reg$coefficients[1,2],5)}
+
+Under the null hyopthesis, p-value of slope is significant to reject the null. The estimate of the slope is \Sexpr{round(sum_reg$coefficients[1,2],5)} with sd of \Sexpr{round(sum_reg$coefficients[2,2],5)}\\
+
+Quality indices RSE, R square, and F-statistic are given in the table below: 
+
+<<Quality indices table, echo = FALSE, results = tex>>=
+ind = data.frame(Quantity=c("R2","RSE","F-stat"), Value = c(sum_reg$r.squared,sum_reg$sigma,sum_reg$fstatistic[1]))
+indice_table = xtable(ind, digits = 4, caption = "Regression Quality Indices")
+print(indice_table, comment=FALSE, type="latex")
+@
+
+
+R sqaure is the percent of variation that can be explained by the regression equation. It means that about \Sexpr{round(sum_reg$r.squared*100,5)} precent of variations in sales can be explained by the regression equation.
+
+Residual Standard Error refers the estimated standard error of residuals. It measures the distance between the data point and the regression equation. Here, RSE is \Sexpr{round(sum_reg$sigma,5)} on 198 degrees of freedom.
+
+In simple linear regression, null hypothesis of F-test is 'slope equals to zero.' Here, F-statistics is \Sexpr{round(sum_reg$fstatistic[1],5)} which is significant to reject the null.
+
+
 
 
 \section{Conclusions}
