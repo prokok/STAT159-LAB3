@@ -37,11 +37,45 @@ To estimate the coefficients $\beta_{0}$ and $\beta_{1}$ we fit a regression mod
 \section{Results}
 The regression coefficients are discribed below in a table:
 
-```{r echo = FALSE, results='asis'}
-load("../data/regression.Rdata")
-sum_table = xtable(sum_reg$coefficient,  digits = 4, caption="Information about Regression Coefficients")
-print(sum_table, comment=FALSE, type = "latex")
-```
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 7.0326 & 0.4578 & 15.3603 & 0.0000 \\ 
+  tv & 0.0475 & 0.0027 & 17.6676 & 0.0000 \\ 
+   \hline
+\end{tabular}
+\caption{Information about Regression Coefficients} 
+\end{table}   
+Under the null hyopthesis, p-value of intercept is significant to reject the null. The estimate of the   intercept is 7.03259 with sd of 0.45784
+
+Under the null hyopthesis, p-value of slope is significant to reject the null. The estimate of the slope is 0.45784 with sd of 0.00269\\
+
+Quality indices RSE, R square, and F-statistic are given in the table below: 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlr}
+  \hline
+ & Quantity & Value \\ 
+  \hline
+1 & R2 & 0.6119 \\ 
+  2 & RSE & 3.2587 \\ 
+  3 & F-stat & 312.1450 \\ 
+   \hline
+\end{tabular}
+\caption{Regression Quality Indices} 
+\end{table}
+
+R sqaure is the percent of variation that can be explained by the regression equation. It means that about 61.1875050850071 precent of variations in sales can be explained by the regression equation.
+
+Residual Standard Error refers the estimated standard error of residuals. It measures the distance between the data point and the regression equation. Here, RSE is 3.25865636865046 on 198 degrees of freedom.
+
+In simple linear regression, null hypothesis of F-test is 'slope equals to zero.' Here, F-statistics is 312.144994372713 which is significant to reject the null.
+
+
 
 
 \section{Conclusions}

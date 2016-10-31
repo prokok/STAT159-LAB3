@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.1)  31 OCT 2016 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.1)  31 OCT 2016 13:13
 entering extended mode
 **./lab9.tex
 (lab9.tex
@@ -322,57 +322,31 @@ LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <9> not available
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.42 sum_
-         table = xtable(sum_reg$coefficient,  digits = 4, caption="Informati...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.43 print(sum_
-               table, comment=FALSE, type = "latex")
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.45 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (2.66678pt too wide) in paragraph at lines 40--45
-[]\T1/aer/m/n/10 ```r echo = FALSE, re-sults='asis' load("../data/regression.Rd
-ata") sum$[]\OML/cmm/m/it/10 able \OT1/cmr/m/n/10 =
  []
 
 [2] (lab9.aux) ) 
 Here is how much of TeX's memory you used:
- 3320 strings out of 493334
- 44889 string characters out of 3139253
- 101871 words of memory out of 3000000
- 6770 multiletter control sequences out of 15000+200000
+ 3321 strings out of 493334
+ 44930 string characters out of 3139253
+ 102871 words of memory out of 3000000
+ 6771 multiletter control sequences out of 15000+200000
  29605 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,25p,478b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,8n,25p,478b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\vlfgn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\tcrm0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmti9.pfb>
-Output written on lab9.pdf (2 pages, 129679 bytes).
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmti9.pfb>
+Output written on lab9.pdf (2 pages, 128416 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
